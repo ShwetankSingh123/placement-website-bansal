@@ -47,7 +47,7 @@ $row = mysqli_fetch_assoc($data);
       <p> provides best environment for learning and growing</p>
 
     </div>-->
-    <form action="recordUpdation.php" method="post">
+    <form action="adminrecordUpdation.php" method="post">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
         <h2>Edit here</h2>
