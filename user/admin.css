@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 .sidebar{
   position: fixed;
@@ -155,7 +156,6 @@ nav .search-box .bx-search{
   min-width: 190px;
   padding: 0 15px 0 2px;
 }
-
 nav .profile-details img{
   height: 40px;
   width: 40px;
@@ -405,5 +405,12 @@ nav .profile-details i{
   .sidebar.active ~ .home-section nav{
     left: 60px;
     width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 750px){
+  .vl{
+    /* display: none; */
+    height: 200px;
   }
 }

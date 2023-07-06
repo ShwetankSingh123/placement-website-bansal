@@ -16,7 +16,7 @@ $total = mysqli_num_rows($result);
 if($total==1){
 	$_SESSION['username']=$username;
 	$_SESSION['password']=$password;
-	header('location:display.php');
+	header('location:user\user.php');
 } else{
 	echo "Login Failed";
 }
