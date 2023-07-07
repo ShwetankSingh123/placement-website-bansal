@@ -5,46 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="js/script.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 <body>
 
-    <header class="header">
-        <nav id="sushil">
-          <a href="index.html" id="logo">BIET</a>
-          <i class="fas fa-bars" id="ham-menu"></i>
-          <ul id="nav-bar">
-            <li>
-              <a href="index.html">HOME</a>
-            </li>
-            <li>
-              <a href="#about">ABOUT US</a>
-            </li>
-            <li>
-              <a href="#services">ACADEMICS</a>
-            </li>
-            <li>
-              <a href="logIn.html">STUDENT'S</a>
-            </li>
-            <li>
-              <a href="adminLogin.html">ADMIN</a>
-            </li>
-            <li>
-                <a href="#contact">FEEDBACK</a>
-              </li>
-          </ul>
-        </nav>
-      </header>
+     <header class="header">
+        <section class="flex">
+            <a href="index.html" class="logo">BIET</a>
+            <nav class="navbar">
+                <!-- <a href="file:///E:/major/major.html#home">HOME</a> -->
+                <!-- <a href="file:///E:/major/About/about.html">ABOUT</a> -->
+                <a href="#courses">ACADEMICS</a>
+                <a href="#teachers">STUDENT'S</a>
+                <a href="#review">FEEDBACK</a>
+                <a href="adminLogin.html" target="_blank">ADMIN</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+           
+        </section>
+    </header>  
 
     <section class="home" id="home">
         <div class="row">
             <div class="content">
                 <h3>Training <span>& Placement</span></h3>
                 <a href="https://www.bansaliet.in/" target="_blank" class="btn">Visit us to know more</a>&nbsp;&nbsp
-                <a href="registration.php" target="_blank" class="btn" id="singh">Student's Register here</a>
+                <a href="registration.php" target="_blank" class="btn">Register here</a>
                 <div>
             </div>
         </div>
@@ -88,38 +77,38 @@
     </section>
 
    
-    <section class="courses" id="courses">
+    <section class="courses" id="courses" name="courses">
         <h1 class="heading">High&nbsp;<span>Placement</span></h1>
         <div class="swiper mySwiper" id="swsl">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/4.jpg" alt="">
+                     <img src="images/4.jpg" alt="...">
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/5.jpg" alt="">
+                     <img src="images/5.jpg" alt="...">
                     
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/6.jpg" alt="">
+                     <img src="images/6.jpg" alt="...">
                     
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/7.jpg" alt="">
+                     <img src="images/7.jpg" alt="...">
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/8.jpg" alt="">
+                     <img src="images/8.jpg" alt="...">
         
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/9.jpg" alt="">
+                     <img src="images/9.jpg" alt="...">
         
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/10.jpg" alt="">
+                     <img src="images/10.jpg" alt="...">
         
                 </div>
                 <div class="swiper-slide slide" id="zoom">
-                    <img src="images/11.jpg" alt="">
+                     <img src="images/11.jpg" alt="...">
         
                 </div>
             </div>
@@ -134,29 +123,29 @@
         <div class="swiper course-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
-                    <img src="images/cs.jpg" alt="">
+                    <img src="images/cs.jpg" alt=""> 
                     <h3>Computer-science</h3>
-                    <p>Computer science is the study of computation, information, and automation.Computer science spans theoretical disciplines (such as algorithms, theory of computation) to applied disciplines.</p>
+                    <p>Computer science is the study of computation, information, and automation.Computer science spans theoretical disciplines (such as algorithms, theory of computation) to applied disciplines.</p> 
                 </div>
                 <div class="swiper-slide slide">
                     <img src="images/me.jpg" alt="">
                     <h3>Mechanical</h3>
-                    <p>Mechanical engineering is the study of physical machines that may involve force and movement. It is a branch that combines engineering physics and mathematics principles with materials science.</p>
+                    <p>Mechanical engineering is the study of physical machines that may involve force and movement. It is a branch that combines engineering physics and mathematics principles with materials science.</p> 
                 </div>
                 <div class="swiper-slide slide">
-                    <img src="images/el.jpg" alt="">
+                    <img src="images/el.jpg" alt=""> 
                     <h3>Electrical</h3>
-                    <p>Electrical engineering is an engineering discipline concerned with the study, design, and application of equipment, devices, and systems which use electricity, electronics, and electromagnetism.</p>
+                    <p>Electrical engineering is an engineering discipline concerned with the study, design, and application of equipment, devices, and systems which use electricity, electronics, and electromagnetism.</p> 
                 </div>
                 <div class="swiper-slide slide">
-                    <img src="images/civil.jpg" alt="">
+                    <img src="images/civil.jpg" alt=""> 
                     <h3>Civil</h3>
-                    <p>Civil engineering is deals with the design, construction, and maintenance of the physical and naturally built environment, including public works such as roads, bridges, canals, airports and railways.</p>
+                    <p>Civil engineering is deals with the design, construction, and maintenance of the physical and naturally built environment, including public works such as roads, bridges, canals, airports and railways.</p> 
                 </div>
                 <div class="swiper-slide slide">
                     <img src="images/bio.jpg" alt="">
                     <h3>Bio-Tech</h3>
-                    <p>Biological engineering is the application of principles of biology and the tools of engineering to create economically viable products.It employs expertise from a number of pure and applied sciences.</p>
+                    <p>Biological engineering is the application of principles of biology and the tools of engineering to create economically viable products.It employs expertise from a number of pure and applied sciences.</p> 
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -164,14 +153,14 @@
     </section>
 
 
- <section class="reviews" id="reviews">
+ <section class="reviews" id="reviews" name="review">
     <h1 class="heading">Student's <span>Reviews</span></h1>
     <div class="swiper reviews-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s1.jpg" alt="">
+                     <img src="images/s1.jpg" alt="">
                     <div class="user-info">
                         <h3>maya</h3>
                         <div class="stars">
@@ -188,7 +177,7 @@
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s2.jpg" alt="">
+                     <img src="images/s2.jpg" alt="">
                     <div class="user-info">
                         <h3>vishrya</h3>
                         <div class="stars">
@@ -205,7 +194,7 @@
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s3.jpg" alt="">
+                     <img src="images/s3.jpg" alt="">
                     <div class="user-info">
                         <h3>shweta</h3>
                         <div class="stars">
@@ -222,9 +211,9 @@
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s4.jpg" alt="">
+                    <img src="s4.jpg" alt=""> 
                     <div class="user-info">
-                        <h3>neeraj</h3>
+                        <h3>neeraj</h3> 
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -239,9 +228,9 @@
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s4.jpg" alt="">
+                    <img src="s5.jpg" alt=""> 
                     <div class="user-info">
-                        <h3>sonu</h3>
+                        <h3>sonu</h3> 
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -256,9 +245,9 @@
             <div class="swiper-slide slide">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia qui earum excepturi quidem eius expedita distinctio voluptate quisquam rerum reiciendis eaque cum commodi delectus ullam voluptatem similique. Sed, pariatur?</p>
                 <div class="user">
-                    <img src="images/s6.jpg" alt="">
+                    <img src="s6.jpg" alt=""> 
                     <div class="user-info">
-                        <h3>sintoo</h3>
+                        <h3>sintoo</h3> 
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -274,6 +263,8 @@
         <div class="swiper-pagination"></div>
     </div>
  </section>
+
+
 
 
  <section class="contact" id="contact">
@@ -324,7 +315,11 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
- <script src="script.js"></script> 
+<script src="js/script.js"></script>
+
+
+
+
 
 
 </body>
