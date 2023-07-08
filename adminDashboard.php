@@ -231,6 +231,7 @@ $result3 = mysqli_fetch_assoc($data3);
                             <table class="styled-table">
                                 <thead>
                                     <tr>
+                                        <th>Student Image</th>
                                         <th>Student Name</th>
                                         <th>E-mail</th>
                                         <th>Roll No.</th>
@@ -251,6 +252,7 @@ $result3 = mysqli_fetch_assoc($data3);
                                         echo
                                         "<tbody>
               <tr>
+                <td><img src='$row[image]' height='50px' width='50px'></td>
                 <td><a href='#'>" . $row['name'] . "</a></td>
                 <td>" . $row['email'] . "</td>           
                 <td>" . $row['phonenumber'] . "</td>

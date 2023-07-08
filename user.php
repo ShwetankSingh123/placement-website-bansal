@@ -59,9 +59,10 @@ if($total != 0){
     
     while($row = mysqli_fetch_assoc($data)){
        
-            $roolno = $row['rollno'];
+            $rollno = $row['rollno'];
             $name=$row['name'];
             $email=$row['email'];
+            $image = $row['image'];
             $fname=$row['fname'];
             $mname=$row['mname'];
             $phonenumber=$row['phonenumber'];
@@ -80,6 +81,8 @@ if($total != 0){
         
     }
 
+    //$_SESSION['image']=$image;
+    
 }else{
     echo "No record Found";
 }
@@ -124,7 +127,7 @@ if($total != 0){
       <span class="logo_name">BIET, Lucknow</span>
     </div>
     <div class="col-md-3 border-right">
-      <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img style="border-radius: 100%; border: 1px solid white; margin-left: 15%;" class="rounded-circle mt-5" width="150px" src="1671707464292.jpg"></div>
+      <div class="d-flex flex-column align-items-center text-center p-3 py-5"><?php echo "<img src='$image' class='rounded-circle mt-5' style='border-radius: 100%; border: 1px solid white; margin-left: 15%;' height='150px' width='150px'>"; ?></div>
       
   </div>
       <ul class="nav-links">
@@ -135,7 +138,7 @@ if($total != 0){
           </a>
         </li>
         <li>
-          <a href="personal.php">
+          <a href="personal.php?userimage=$image">
             <i class='bx bx-box' ></i>
             <span class="links_name">Personal Info.</span>
           </a>
@@ -226,7 +229,18 @@ if($total != 0){
         <div class="recent-sales box">
           <div class="title">Your Information</div>
           <div class="sales-details">
-            <ul class="details">
+          
+          <ul class="details">
+              <li class="topic">Image</li>
+              <li><a href="#"><?php echo "<img src='$image' height='100px' width='100px'>"; //echo $stdimage;?><!--<img src="images/Screenshot 2023-07-03 102049.png">--></a></li>
+
+            </ul>
+            <div class="vl"></div>
+
+
+
+          
+          <ul class="details">
               <li class="topic">Student Name</li>
               <li><a href="#"><?php echo $name;?></a></li>
 
@@ -293,3 +307,5 @@ sidebarBtn.onclick = function() {
 
 </body>
 </html>
+
+<?php setcookie("userimage",$image,time()+3600);?>

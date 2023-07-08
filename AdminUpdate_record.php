@@ -47,7 +47,7 @@ $row = mysqli_fetch_assoc($data);
       <p> provides best environment for learning and growing</p>
 
     </div>-->
-    <form action="adminrecordUpdation.php" method="post">
+    <form action="adminrecordUpdation.php" method="post" enctype="multipart/form-data">
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
         <h2>Edit here</h2>
@@ -60,6 +60,7 @@ $row = mysqli_fetch_assoc($data);
         <input type="text" value="<?php echo $row['phonenumber']; ?>" name="phonenumber" placeholder="PhoneNumber" >
         <input type="text" value="<?php echo $row['highSchool']; ?>" name="highschoolname" placeholder="High School Name">
         <input type="text" value="<?php echo $row['Inter']; ?>" name="inter" placeholder="Inter School Name">
+        <input type="file" value="<?php echo $row['image']?>" name="image" >
         <input type="text" value="<?php echo $row['Diploma']; ?>" name="diploma" placeholder="Diploma">
         <input type="text" value="<?php echo $row['BTech']; ?>" name="btech" placeholder="B.Tech">
         <input type="text" value="<?php echo $row['Award']; ?>" name="award" placeholder="Awards">
