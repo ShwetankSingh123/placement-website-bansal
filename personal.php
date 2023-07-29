@@ -43,10 +43,13 @@ if ($total != 0) {
     $mname = $row['mname'];
     $phonenumber = $row['phonenumber'];
     $course = $row['course'];
+    $about = $row['about'];
     $highschool = $row['highSchool'];
     $inter = $row['Inter'];
+    $address = $row['address'];
     $diploma = $row['Diploma'];
     $btech = $row['BTech'];
+    $branch = $row['branch'];
     $award = $row['Award'];
     $training = $row['training'];
     $duration = $row['duration'];
@@ -91,7 +94,7 @@ if ($total != 0) {
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxs-bank'></i>
+    <i class='bx bxs-graduation'></i>
       <span class="logo_name">BIET, Lucknow</span>
     </div>
     <ul class="nav-links">
@@ -123,9 +126,9 @@ if ($total != 0) {
       </li>
 
       <li>
-        <a href="#">
+        <a href="projects.php">
           <i class='bx bx-message'></i>
-          <span class="links_name">Enquiry</span>
+          <span class="links_name">Projects</span>
         </a>
       </li>
 
@@ -136,7 +139,7 @@ if ($total != 0) {
           </a>
         </li> -->
       <li class="log_out">
-        <a href="#">
+        <a href="logout.php">
           <i class='bx bx-log-out'></i>
           <span class="links_name">Log out</span>
         </a>
@@ -151,8 +154,9 @@ if ($total != 0) {
       </div>
 
       <div class="profile-details">
-        User Name gdfbjfhbjrhd
-        <!-- yaha ek user ka naam show karna hai -->
+        <?php echo $name; ?>
+
+      </div>
     </nav>
 
 
@@ -161,7 +165,7 @@ if ($total != 0) {
       <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
           <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="<?php echo $image; ?>"><span class="font-weight-bold">User Name</span><span class="text-black-50">User@mail.com</span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="<?php echo $image; ?>"><span class="font-weight-bold"><?php echo $name; ?></span><span class="text-black-50"><?php echo $email; ?></span><span> </span></div>
 
           </div>
           <div class="col-md-5 border-right">
@@ -171,50 +175,110 @@ if ($total != 0) {
               </div>
               <form method="post" action="#" enctype="multipart/form-data">
                 <div class="row mt-2">
-                  <div class="col-md-6"><label class="labels">Full Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                  <!--<div class="col-md-6"><label class="labels">Full Name</label><input type="text" class="form-control" placeholder="first name" name="name" value=""></div>-->
 
-                  <div class="col-md-6"><label class="labels">E-mail</label><input type="text" class="form-control" value="" placeholder="E-amail"></div>
-                  <div class="col-md-6"><label class="labels">Roll Number</label><input type="text" class="form-control" value="" placeholder="E-amail"></div>
-                  <div class="col-md-6"><label class="labels">Branch</label><input type="text" class="form-control" value="" placeholder="Branch"></div>
+                  <div class="col-md-6"><label class="labels">E-mail</label><input type="text" class="form-control" value="<?php echo $email; ?>" placeholder="E-amail" name="email"></div>
+                  <div class="col-md-6"><label class="labels">Roll Number</label><input type="text" class="form-control" value="<?php echo $rollno; ?>" placeholder="Roll No." name="roll No."></div>
+                  <!-- <div class="col-md-6"><label class="labels">Branch</label><input type="text" class="form-control" placeholder="Branch"></div> -->
+                  <div class="col-md-6">
+                    <label class="labels">Branch</label>
+                    <select class="form-control" name="branch" value="<?php echo $branch; ?>">
+                      <option value="" selected>Branch</option>
 
+                      <option value="computer science" <?php if ($branch == 'computer science') {
+                                                          echo "selected";
+                                                        } ?>>COMPUTER SCIENCE</option>
+                      <option value="civil" <?php if ($branch == 'civil') {
+                                              echo "selected";
+                                            } ?>>CIVIL</option>
+                      <option value="biotechnology" <?php if ($branch == 'biotechnology') {
+                                                      echo "selected";
+                                                    } ?>>BIOTECHNOLOGY</option>
+                      <option value="mba" <?php if ($branch == 'mba') {
+                                            echo "selected";
+                                          } ?>>MECHENICAL</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="row mt-3">
-                  <div class="col-md-12"><label class="labels">Phone Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                  <div class="col-md-12"><label class="labels">Phone Number</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $phonenumber; ?>"></div>
+                  <br><br>
+                  <div class="col-md-12"><label class="labels">Adress</label><input type="text" class="form-control" placeholder="address" value="<?php echo $address; ?>" name="address"></div>
+                  <br><br>
+                  <div class="col-md-12"><label class="labels">Change Profile Picture</label><input type="file" class="form-control" name="stdimage" value="<?php echo $image; ?>"></div>
+                </div><br>
+                <div class="col-md-12"><label class="labels">About</label><textarea class="form-control" name="about"><?php echo $about;?></textarea></div>
 
-                  <div class="col-md-12"><label class="labels">Change Profile Picture</label><input type="file" class="form-control" name="stdimage"></div>
-                </div>
                 <div class="mt-5 text-center"><input class="btn btn-primary profile-button" type="submit" value="Update Profile"></div>
               </form>
 
+              <script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+  </script>
 
 </body>
 
 </html>
 
 
-<?php 
+<?php
 
-$filename = $_FILES["stdimage"]["name"];
-$tempname = $_FILES["stdimage"]["tmp_name"]; 
+$email = $_POST["email"];
+$branch = $_POST["branch"];
+$about = $_POST["about"];
+$address = $_POST["address"];
 
-$folder ="images/".$filename;
-//echo $tempname;
-//echo $folder;
-move_uploaded_file($tempname, $folder);
- //echo $rollno;
-$query1 = "UPDATE profile SET image='$folder' WHERE rollno = $rollno";
+//echo $address;
+//echo $email;
 
-$data2 = mysqli_query($conn,$query1);
- echo $data2;
 
-if($data2){
-  // echo "<script>alert('Updation Successful')</script>";
-   header('location:personal.php');
- ?>
-  <!-- <meta http-equiv="refresh" content="3; url=http://localhost/display.php"></meta>-->
- <?php
-}else{
- echo "Failed to save";
+if ($email  != null && $email != "" && $about !="" && $about!=null && $address != null && $address != ""){
+
+  $filename = $_FILES["stdimage"]["name"];
+  $tempname = $_FILES["stdimage"]["tmp_name"];
+
+  $folder = "images/" . $filename;
+  //echo $tempname;
+  //echo $folder;
+
+  if ($filename != null && $filename != "") {
+    move_uploaded_file($tempname, $folder);
+
+    $query1 = "UPDATE profile SET image='$folder' WHERE rollno = $rollno";
+
+    $data2 = mysqli_query($conn, $query1);
+    //echo $data2;
+  }
+
+
+  //echo $rollno;
+
+
+
+  $query3 = "UPDATE profile SET email='$email',branch='$branch',about='$about', address ='$address' WHERE rollno = $rollno";
+  $data3 = mysqli_query($conn, $query3);
+
+
+  if ($data3) {
+    //echo "heelo";
+    // echo "<script>alert('Updation Successful')</script>";
+    header('location:personal.php');
+?>
+    <!-- <meta http-equiv="refresh" content="3; url=http://localhost/display.php"></meta>-->
+<?php
+  } else {
+    echo "Failed to save";
+  }
 }
+
+
 
 ?>

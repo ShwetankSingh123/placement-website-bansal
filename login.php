@@ -16,6 +16,22 @@ $total = mysqli_num_rows($result);
 if($total==1){
 	$_SESSION['username']=$username;
 	$_SESSION['password']=$password;
+	//while ($row = mysqli_fetch_array($result)){
+		
+
+
+		//if (password_verify($password, $pass )) {
+			//$_SESSION['id'] = $id;
+			//$_SESSION['username'] = $user;
+			//$_SESSION['firstname'] = $firstname;
+			//$_SESSION['lastname'] = $lastname;
+			//$_SESSION['email']  = $email;
+			//$_SESSION['role'] = $role;
+			//$_SESSION['image'] = $image;
+			//header('location: admin');
+		//}
+	//}
+	
 	header('location:user.php');
 } else{
 	echo "Login Failed";
